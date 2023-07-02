@@ -7,7 +7,11 @@ const userRoutes = require("./routes/userRoute");
 const phoneRoutes = require("./controllers/phoneCodeController")
 
 // using middleware
-app.use(cors());
+app.use(cors({
+    origin:["https://novelti-assignment.vercel.app"],
+    methods:["POST","GET","PUT","PATCH","DELETE"],
+    credentials:true
+}));
 app.use(express.json());
 
 // connecting to database
