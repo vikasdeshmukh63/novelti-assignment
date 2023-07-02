@@ -9,7 +9,7 @@ export function getAllUsers(page, limit) {
     return async function getAllUsersThunk(dispatch, getState) {
         try {
             dispatch(setLoading(true));
-            const { data } = await axios.get(`/users?page=${page}&limit=${limit}`);
+            const { data } = await axios.get(`https://novelti-assignment-server.vercel.app/api/v1/users?page=${page}&limit=${limit}`);
             dispatch(setLoading(false));
             if (data.success) {
                 dispatch(addUsers(data.users));
@@ -27,7 +27,7 @@ export function createUser(userData) {
     return async function createUserThunk(dispatch, getState) {
         try {
             dispatch(setLoading(true));
-            const { data } = await axios.post("/user/new", userData);
+            const { data } = await axios.post("https://novelti-assignment-server.vercel.app/api/v1/user/new", userData);
             dispatch(setLoading(false));
             if (data.success) {
                 toast.success(data.message);
@@ -46,7 +46,7 @@ export function updateUser(id, updateData) {
     return async function updateUserThunk(dispatch, getState) {
         try {
             dispatch(setLoading(true));
-            const { data } = await axios.put(`/user/${id}`, updateData)
+            const { data } = await axios.put(`https://novelti-assignment-server.vercel.app/api/v1/user/${id}`, updateData)
             dispatch(setLoading(false));
             if (data.success) {
                 toast.success(data.message);
@@ -66,7 +66,7 @@ export function getUserDetails(id) {
     return async function getUserDetailsThunk(dispatch, getState) {
         try {
             dispatch(setLoading(true));
-            const { data } = await axios.get(`/user/${id}`);
+            const { data } = await axios.get(`https://novelti-assignment-server.vercel.app/api/v1/user/${id}`);
             dispatch(setLoading(false));
             if (data.success) {
                 dispatch(setUser(data.user));
@@ -86,7 +86,7 @@ export function deleteUser(id) {
     return async function deleteUserThunk(dispatch, getState) {
         try {
             dispatch(setLoading(true));
-            const { data } = await axios.delete(`/user/${id}`);
+            const { data } = await axios.delete(`https://novelti-assignment-server.vercel.app/api/v1/user/${id}`);
             dispatch(setLoading(false));
             if (data.success) {
                 toast.success(data.message);
