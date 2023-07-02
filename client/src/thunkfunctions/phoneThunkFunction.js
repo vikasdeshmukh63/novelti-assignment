@@ -8,7 +8,7 @@ export function getPhoneCodes() {
     return async function getPhoneCodesThunk(dispatch, getState) {
         try {
             dispatch(setLoading(true));
-            const { data } = await axios.get("http://localhost:5000/api/v1/phonecodes");
+            const { data } = await axios.get("/phonecodes");
             dispatch(setLoading(false));
             if (data.success) {
                 dispatch(addCodes(data.phoneCodes))
