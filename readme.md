@@ -1,4 +1,10 @@
-for each user in the list. When selected, users can modify their details and save the changes, which will be reflected in the database. Proper validation is applied to ensure the accuracy of the updated information.
+### Features of Project
+
+- User Form: Create a user form with a user-friendly interface that allows users to enter their personal information, including first name, last name, email address, mobile number, address details, state, city, country, and zip code.
+- Form Validation: Implement comprehensive form validation to ensure that the entered data is accurate and complete. The validation rules include checking for the required fields, minimum character length for names, valid email format, proper mobile number format with country code selection, mandatory address details, auto-complete search for state selection, multi-select dropdown with search option for country selection, and number validation for zip code.
+- Create User: Provide a functionality to create a new user by capturing the data entered in the user form and storing it in the database. Upon successful creation, users will receive a notification that user is created.
+- View List of Users: Display a list of all the users stored in the database, showing their basic information such as name, email address, and mobile number. Users can easily browse through the list and access individual user profiles for further actions.
+- Edit and Update User: Allow users to edit their information by providing an edit option for each user in the list. When selected, users can modify their details and save the changes, which will be reflected in the database. Proper validation is applied to ensure the accuracy of the updated information.
 - Delete User: Enable users to delete their profiles from the system. This feature removes the user's data from the database.
 
 ###Technologies Used
