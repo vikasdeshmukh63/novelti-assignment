@@ -8,7 +8,7 @@ const phoneRoutes = require("./controllers/phoneCodeController")
 
 // using middleware
 app.use(cors({
-    origin:[""],
+    origin:["https://novelti-assignment.vercel.app/"],
     methods:["POST","GET"],
     credentials:true
 }));
