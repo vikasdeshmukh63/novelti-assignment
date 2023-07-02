@@ -22,5 +22,8 @@
 
 `$ npm run dev`
 
--- to start the server the command is 
+- to start the server the command is 
 `$ npm run dev`
+
+- project deployed link 
+<https://novelti-assignment.vercel.app/>
